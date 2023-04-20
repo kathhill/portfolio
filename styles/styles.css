@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Jost', sans-serif;
+}
+
+header {
+   background: linear-gradient(45deg, #b3193f 60%, #e62051, #eb6788);
+   color: white;
+   display: flex;
+   justify-content: center;
+   min-height: 100vh;
+   position: relative;
+
+}
+
+header h1 {
+
+}
+
+.projects {
+    background-color: rebeccapurple;
+    color: white;
+    position: relative;
+    min-height: 100vh;;
+}
+
+.custom-shape-divider-bottom-1682025258 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-bottom-1682025258 svg {
+    position: relative;
+    display: block;
+    width: calc(150% + 1.3px);
+    height: 249px;
+}
+
+.custom-shape-divider-bottom-1682025258 .shape-fill {
+    fill: #FFFFFF;
+}
+
+.custom-shape-divider-top-1682025338 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-top-1682025338 svg {
+    position: relative;
+    display: block;
+    width: calc(150% + 1.3px);
+    height: 249px;
+}
+
+.custom-shape-divider-top-1682025338 .shape-fill {
+    fill: #FFFFFF;
+}
+
+COPY HTMLCOPY CSSDOWN
