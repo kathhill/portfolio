@@ -2,31 +2,69 @@
 
 html {
     scroll-behavior: smooth;
+    font-size: 16px; 
 }
 
 body {
     font-family: 'Jost', sans-serif;
 }
 
+h1,
+h2,
+h3,
+h4 {
+    font-weight: 200;
+}
+
+p {
+    font-weight: 300;
+}
+
 header {
-   background: linear-gradient(45deg, #b3193f 60%, #e62051, #eb6788);
+   background: linear-gradient(45deg, #4e0048 60%, #6b0062, #9b1d91, #a73c9e);
    color: white;
-   display: flex;
-   justify-content: center;
+   display: grid;
+   font-size: 2rem;
    min-height: 100vh;
    position: relative;
+}
 
+header nav ul {
+   list-style: none;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
 }
 
 header h1 {
+  letter-spacing: 6px;  
+  line-height: .9;
+}
+
+header h1 span {
+   font-size: 1em;
+   letter-spacing: 1px;
+}
+
+section {
+    font-size: 2rem;
+}
+
+#projects {
+    
+}
+
+#skills {
 
 }
 
-.projects {
-    background-color: rebeccapurple;
+footer {
+    background: linear-gradient(45deg, #4e0048 60%, #6b0062, #9b1d91, #a73c9e);
     color: white;
     position: relative;
-    min-height: 100vh;;
+    min-height: 100vh;        
 }
 
 .custom-shape-divider-bottom-1682025258 {
@@ -69,5 +107,3 @@ header h1 {
 .custom-shape-divider-top-1682025338 .shape-fill {
     fill: #FFFFFF;
 }
-
-COPY HTMLCOPY CSSDOWN
