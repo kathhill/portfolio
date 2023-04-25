@@ -4,48 +4,141 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kathleen Hill | Full-Stack Engineer</title>
-    <link rel="stylesheet" href="styles/styles.css">
+    <title>Kathleen Hill | Web Engineer</title>
+    <link rel="stylesheet" href="styles/modern-normalize.min.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <script src="scripts/main.js" defer></script>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#about">about me</a></li>
-                <li><a href="#projects">projects</a></li>
-                <li><a href="#skills">skills</a></li>
-                <li><a href="contact.html">contact</a></li>
-            </ul>
-        </nav>
-        <div class="custom-shape-divider-bottom-1682025258">
-            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
-            </svg>
-        </div>
-        <h1>kathleen hill<br /><span>web engineer</span></h1>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <nav>
+                    <ul>
+                        <li><a href="#about">about me</a></li>
+                        <li><a href="#projects">projects</a></li>
+                        <li><a href="#skills">skills</a></li>
+                        <li><a href="contact.html">contact</a></li>
+                    </ul>
+                </nav>        
+                <h1>kathleen hill<span>web engineer</span></h1>
+            </div>        
+            <div class="custom-shape-divider-bottom-1682025258">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+                </svg>
+            </div>
+        </header>
+        <main>
+            <section id="about">
+                <h2>About Me</h2>
+                <p>I'm a California native living in the San Diego area with my husband Seth and our dog Luna, who we adopted during the pandemic. We have three grown children who also live in the area.</p>
 
-    </header>
-    <main>
-        <section id="about">
-            <h2>About Me</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin facilisis ante vel tempor auctor. Phasellus sollicitudin, lacus eget facilisis efficitur, orci turpis consectetur risus, non ultricies est ante ac dolor. Praesent ornare eleifend sem iaculis efficitur. Aliquam sed laoreet ligula. </p>
-                
-            <p>Donec vel sapien lobortis, fringilla enim at, convallis dui. Vivamus ac convallis sapien. In sed mi ut quam luctus elementum. Phasellus ut arcu in mauris consequat aliquet quis ac velit. Donec vel erat viverra, blandit libero nec, luctus felis. Quisque eu tristique lorem. Vivamus tincidunt cursus sem. Vestibulum non viverra mi, eget euismod orci. Etiam volutpat, sapien sit amet blandit porta, quam tellus ultricies neque, eu sollicitudin augue mauris at arcu. Nullam feugiat nibh vitae tortor efficitur, in tristique lacus laoreet. Vivamus sed elementum justo.</p>
-        </section>
-        <section id="projects">            
-            <h2>Projects</h2>
-        </section>
-        <section id="skills">
-            <h2>Skills</h2>
-        </section>
-    </main>
-    <footer>
-        <div class="custom-shape-divider-top-1682025338">
-            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
-            </svg>          
-        </div>
-        <p>&copy;2023 kathleen hill</p>
-    </footer>
+                <p>I am passionate about the Web and learning new technologies. I have been working as a web developer for over 15 years but, in the interest of taking my skills to the next level, I am working toward my professional certification as a Full-Stack Engineer. </p>             
+                    
+            </section>
+            <section id="projects">            
+                <h2>Featured Projects</h2>
+                <ul class="cards">
+                    <li class="card">
+                        
+                            <div class="card-front">
+                                <h3>GetFit Personal Trainers</h3>
+                                <img src="images/getfit.jpg" alt="" />
+                            </div>
+                            <div class="card-back">
+                                <table>
+                                    <tr>
+                                        <td>Challenge:</td>
+                                        <td>Build a company home page using flexbox</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Github Repo:</td>
+                                        <td><a href="https://github.com/kathhill/getfit" target="_blank">https://github.com/kathhill/getfit</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Live Site</td>
+                                        <td><a href="https://kathhill.github.io/getfit" target="_blank">https://github.com/kathhill/getfit</a></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        
+                    </li>
+                    <li class="card">
+                        
+                            <div class="card-front">
+                                <h3>North County Travel Club</h3>
+                                <img src="images/nc-travel.jpg" alt="" />
+                            </div>
+                            <div class="card-back">
+                                <p>Challenge Project: Club Page</p>
+                            </div>
+                        
+                    </li>
+                    <li class="card">
+                        
+                            <div class="card-front">
+                                <h3>Saving Shelter Strays</h3>
+                                <img src="images/sss.jpg" alt="" />
+                            </div>
+                            <div class="card-back">
+                                <p>Challenge Project: HTML/CSS</p>
+                            </div>
+                        
+                    </li>
+                    <li class="card">
+                        
+                            <div class="card-front">
+                                <h3>Random Pooh</h3>
+                                <img class="border" src="images/random-pooh.jpg" alt="" />
+                            </div>
+                            <div class="card-back">
+                                <p>Challenge Project: JavaScript Randomizer</p>
+                            </div>
+                        
+                    </li>
+                </ul>
+            </section>
+            <section id="skills">
+                <h2>Skills</h2>
+                <ul>
+                    <li><img src="https://img.shields.io/badge/-HTML5-E34F26?logo=html5&logoColor=white" alt="HTML5" /></li>
+                    <li><img src="https://img.shields.io/badge/-CSS3-1572B6?logo=css3&logoColor=white" alt="CSS3" /></li>
+                    <li><img src="https://img.shields.io/badge/-{less}-1D365D?logo=less&logoColor=white" alt="less" /></li>
+                    <li><img src="https://img.shields.io/badge/-Sass-CC6699?logo=sass&logoColor=white" alt="SASS" /></li>
+                    <li><img src="https://img.shields.io/badge/-Tailwind%20Css-06B6D4?logo=tailwind-css&logoColor=white" alt="tailwindcss" /></li>
+                    <li><img src="https://img.shields.io/badge/-styled%20components-DB7093?logo=styled-components&logoColor=white" alt="styled components" /></li>
+                    <li><img src="https://img.shields.io/badge/-JavaScript-F7DF1E?logo=javascript&logoColor=white" alt="javascript" /></li>
+                    <li><img src="https://img.shields.io/badge/-TypeScript-3178C6?logo=typescript&logoColor=white" alt="typescript" /></li>
+                    <li><img src="https://img.shields.io/badge/-Gatsby-663399?logo=gatsby&logoColor=white" alt="gatsby" /></li>
+                    <li><img src="https://img.shields.io/badge/-React-61DAFB?logo=react&logoColor=white" alt="react" /></li>
+                    <li><img src="https://img.shields.io/badge/-.NET-512BD4?logo=dotnet&logoColor=white" alt=".net" /></li>
+                    <li><img src="https://img.shields.io/badge/-PHP-777BB4?logo=php&logoColor=white" alt="php" /></li>
+                    <li><img src="https://img.shields.io/badge/-Git-F05032?logo=git&logoColor=white" alt="git" /></li>
+                    <li><img src="https://img.shields.io/badge/-GitHub-181717?logo=github&logoColor=white" alt="github" /></li>
+                    <li><img src="https://img.shields.io/badge/-Github%20Actions-2088FF?logo=github-actions&logoColor=white" alt="github actions" /></li>
+                    <li><img src="https://img.shields.io/badge/-MySQL-4479A1?logo=mysql&logoColor=white" alt="mysql" /></li>
+                    <li><img src="https://img.shields.io/badge/-Node.js-339933?logo=node.js&logoColor=white" alt="node.js" /></li>
+                    <li><img src="https://img.shields.io/badge/-npm-CB3837?logo=npm&logoColor=white" alt="npm" /></li>
+                    <li><img src="https://img.shields.io/badge/-Adobe%20Creative%20Cloud-DA1F26?logo=adobe-creative-cloud&logoColor=white" alt="adobe creative cloud" /></li>
+                    <li><img src="https://img.shields.io/badge/-Jira-0052CC?logo=jira&logoColor=white" alt="jira" /></li>
+                    <li><img src="https://img.shields.io/badge/-Confluence-172B4D?logo=confluence&logoColor=white" alt="confluence" /></li>
+                    <li><img src="https://img.shields.io/badge/-Octopus%20Deploy-2F93E0?logo=octopus-deploy&logoColor=white" alt="octopus deploy" /></li>                    
+                    <li><img src="https://img.shields.io/badge/-Jenkins-D24939?logo=jenkins&logoColor=white" alt="jenkins" /></li>
+                </ul>
+            </section>
+        </main>
+        <footer>       
+            
+            <div class="custom-shape-divider-top-1682025338">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+                </svg>          
+            </div> 
+            <div class="footer-content">
+                <p>&copy;2023 kathleen hill</p>
+            </div>                       
+        </footer>
+    </div>
 </body>
 </html>
