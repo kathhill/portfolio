@@ -13,7 +13,7 @@ h1,
 h2,
 h3,
 h4 {
-    font-weight: 200;
+    font-weight: 300;
     margin: 0;
     padding: 0;
 }
@@ -24,6 +24,8 @@ h3 {
 
 p {
     font-weight: 300;
+    padding-left: 3rem;
+    padding-right: 3rem;
 }
 
 ul {
@@ -52,7 +54,7 @@ ul {
 header {
    background: linear-gradient(45deg, #4e0048 60%, #6b0062, #9b1d91, #a73c9e);   
    color: white;
-   font-size: 1.5rem;
+   font-size: 2rem;
    min-height: 40vh;
    position: relative;
    grid-area: header;
@@ -68,10 +70,12 @@ header {
     align-items: center;
     align-content: center;
     row-gap: 2em;
+    padding-top: 3rem;
 }
 
 header nav {
     grid-area: nav;
+    font-size: 2.5rem;
 }
 
 header nav ul {
@@ -96,7 +100,7 @@ nav a:focus {
 }
 
 header h1 {
-    font-size:4rem;
+    font-size:6rem;
     grid-area: h1;
     letter-spacing: 6px;  
     line-height: .9;
@@ -115,10 +119,19 @@ main {
   display: grid;  
   margin-bottom: 9rem;
   row-gap: 2rem;
+  grid-template: 1fr 68% 1fr / 1fr;
+  grid-template-areas:
+    "about"
+    "projects"
+    "skills";
 }
 
 section {
-    font-size: 2rem;
+    font-size: 3rem;
+}
+
+section h2 {
+    text-align: center;
 }
 
 #about {
@@ -131,7 +144,7 @@ section {
 
 #projects h2,
 #skills h2 {
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
 }
 
 #projects .cards {
@@ -139,6 +152,8 @@ section {
     display: flex;
     flex-direction: column;
     position: relative;
+    align-items: center;
+    row-gap: 3rem;
 }
 
 #projects .cards .card {
@@ -180,26 +195,44 @@ section {
     transform: rotateY(180deg);
     -webkit-transform: rotateY(180deg);
     position: absolute;
-    text-align: center;
     right: 0;
     left: 0;
     top: 10px;
 }
 
+.card-back dl {
+    margin-top: -10px;
+}
 
+.card-back dt {
+    background-color: #9b1d91;
+    color: white;
+    padding: .5em 0;
+    margin-bottom: 1em;
+    text-align: center;
+}
 
+.card-back dd {
+    font-size: 2.4rem;
+    font-weight: 300;
+    margin-bottom: .5em;
+    padding-right: 1em;
+}
 
 #skills {
     grid-area: skills;
+    padding-left: 3rem;
+    padding-right: 3rem;
 }
 
 #skills ul {
     display: flex;
-    flex-wrap: wrap;    
+    flex-wrap: wrap;  
+    justify-content: center;  
 }
 
 #skills img {
-    height: 2rem;
+    height: 3rem;
     margin-right: 1rem;
 }
 
@@ -214,7 +247,8 @@ footer {
 .footer-content {
     position: absolute;  
     bottom: 3rem;
-    left: 50%;         
+    left: 20%;   
+    font-size: 3rem;      
 }
 
 footer p {    
@@ -223,7 +257,7 @@ footer p {
 
 .custom-shape-divider-bottom-1682025258 {
     position: absolute;
-    bottom: 0;
+    bottom: -1px;
     left: 0;
     width: 100%;
     overflow: hidden;
@@ -234,7 +268,7 @@ footer p {
     position: relative;
     display: block;
     width: calc(150% + 1.3px);
-    height: 85px;
+    height: 130px;
 }
 
 .custom-shape-divider-bottom-1682025258 .shape-fill {
@@ -243,7 +277,7 @@ footer p {
 
 .custom-shape-divider-top-1682025338 {
     position: absolute;
-    top: 0;
+    top: -1px;
     left: 0;
     width: 100%;
     overflow: hidden;
@@ -255,7 +289,7 @@ footer p {
     position: relative;
     display: block;
     width: calc(150% + 1.3px);
-    height: 85px;
+    height: 130px;
 }
 
 .custom-shape-divider-top-1682025338 .shape-fill {
@@ -282,33 +316,71 @@ footer p {
 }
 
 @media (min-width: 1024px) {
+    .container {
+        grid-template: 1fr 70% 1fr / 1fr;
+        grid-template-areas: "header" "main" "footer";
+    }
     header {
-        min-height: 40vh;
+        min-height: 60vh;
+        font-size: 1.5rem;
     }    
     .custom-shape-divider-bottom-1682025258 svg,
     .custom-shape-divider-top-1682025338 svg {
         height: 180px;
     }
+    .header-content {
+        row-gap: 2em;
+        padding-top: 2rem;
+    }
+    header nav {
+        font-size: 2rem;
+    }
+    header h1 {
+        font-size: 4rem;
+    }
+    main {
+        grid-template: 1fr 60% 1fr / 1fr;
+        grid-template-areas:
+            "about"
+            "projects"
+            "skills";
+        margin-bottom: 0;
+    }
     footer {
-        min-height: 20vh;
+        min-height: 50vh;
     }
-    #projects {
-        margin-bottom: 10rem;
+    section {
+        font-size: 2rem;
     }
-    #projects .cards {
+    #projects h2,
+    #skills h2 {
+        margin-bottom: 3rem;
+    }
+        #projects .cards {
         flex-direction: row;
         flex-wrap: wrap;
         row-gap: 3rem;
         column-gap: 3rem;
+        justify-content: center;
     }
     #projects .cards .card {
         width: 40%;
+    }
+    .card-back dd {
+        font-size: 1.5rem;
+    }
+    #skills img {
+        height: 2rem;
+    }
+    .footer-content {
+        font-size: 2rem;
+        left: 32%;
     }
 }
 
 @media (min-width: 1200px) {
     header {
-        min-height: 45vh;
+        min-height: 50vh;
     }    
     .custom-shape-divider-bottom-1682025258 svg,
     .custom-shape-divider-top-1682025338 svg {
@@ -319,6 +391,7 @@ footer p {
     }
     .header-content {
         row-gap: 0;
+        padding-top: 0;
     }
     header h1 {
        font-size: 6rem;
@@ -328,7 +401,7 @@ footer p {
         letter-spacing: 0;
     }
     .container {
-        grid-template: 1fr 65% .5fr / repeat(6, 1fr);
+        grid-template: 1fr 65% 1fr / repeat(6, 1fr);
         grid-template-areas:
             "header header header header header header"
             "   .   main   main   main   main     ."
@@ -346,8 +419,23 @@ footer p {
             "about    about    about  about"
             "projects projects projects skills";
         column-gap: 2rem;
-        margin-bottom: 5rem;
     }   
+    #about p {
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+    .card-back dd {
+        font-size: 1.75rem;
+    }
+    #skills {
+        padding-right: 0;
+    }
+    #skills ul {
+        justify-content: flex-start;
+    }
+    .footer-content {
+        left: 45%;
+    }
 }
 
 
