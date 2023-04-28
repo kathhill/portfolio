@@ -594,7 +594,7 @@ footer p {
         font-size: 1.75rem;
     }
     aside {
-        grid-template: 40% 1fr / 1fr;
+        grid-template: 50% 1fr / 1fr;
         grid-template-areas: "skills" "contact";
     }
     #skills {
