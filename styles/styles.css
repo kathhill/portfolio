@@ -160,9 +160,6 @@ header nav ul {
    padding-left: 0;   
 }
 
-nav li {
-}
-
 nav a {
     color: white;
     text-decoration: none;
@@ -311,8 +308,9 @@ aside {
     grid-area: aside;
     display: grid;
     grid-template: .5fr .5fr / 1fr;
-    grid-template-areas: "skills" "contact";
-    /* row-gap: 5rem;; */
+    grid-template-areas: 
+        "skills" 
+        "contact";
 }
 
 #skills {
@@ -364,10 +362,6 @@ footer {
     bottom: 3rem;
     left: 20%;   
     font-size: 3rem;      
-}
-
-footer p {    
-    
 }
 
 .custom-shape-divider-bottom-1682025258 {
