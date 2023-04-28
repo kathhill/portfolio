@@ -1,5 +1,74 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400&display=swap');
 
+@font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/icomoon.eot?xk8w7');
+    src: url('../fonts/icomoon.eot?xk8w7#iefix') format('embedded-opentype'),
+        url('../fonts/icomoon.ttf?xk8w7') format('truetype'),
+        url('../fonts/icomoon.woff?xk8w7') format('woff'),
+        url('../fonts/icomoon.svg?xk8w7#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    color: #4e0048;
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-envelope1:before {
+    content: "\e900";
+}
+
+.icon-mail:before {
+    content: "\e901";
+}
+
+.icon-email:before {
+    content: "\e901";
+}
+
+.icon-letter:before {
+    content: "\e901";
+}
+
+.icon-envelope:before {
+    content: "\e901";
+}
+
+.icon-contact:before {
+    content: "\e901";
+}
+
+.icon-phone:before {
+    content: "\e942";
+}
+
+.icon-github:before {
+    content: "\eab0";
+}
+
+.icon-linkedin:before {
+    content: "\eac9";
+}
+
+.icon-linkedin2:before {
+    content: "\eaca";
+}
+
 html {
     scroll-behavior: smooth;
     font-size: 100%; 
@@ -20,6 +89,8 @@ h4 {
 
 h3 {
     margin-bottom: 1rem;
+    text-align: center;
+    white-space: nowrap;
 }
 
 p {
@@ -34,17 +105,21 @@ ul {
     padding: 0;
 }
 
+.tighter {
+    letter-spacing: -2px;
+}
+
 .container,
 .grid {
     display: grid;
 }
 
 .border {
-    border: 1px solid black;
+    border: 1px solid #4e0048;
 }
 
 .container {
-    grid-template: 1fr 80% 1fr / 1fr;
+    grid-template: 1fr 85% 1fr / 1fr;
     grid-template-areas: 
         "header"
         "main"
@@ -55,7 +130,7 @@ header {
    background: linear-gradient(45deg, #4e0048 60%, #6b0062, #9b1d91, #a73c9e);   
    color: white;
    font-size: 2rem;
-   min-height: 40vh;
+   min-height: 71vh;
    position: relative;
    grid-area: header;
 }
@@ -117,13 +192,12 @@ header h1 span {
 main {
   grid-area: main;   
   display: grid;  
-  margin-bottom: 9rem;
-  row-gap: 2rem;
-  grid-template: 1fr 68% 1fr / 1fr;
+  row-gap: 5rem;
+  grid-template: 1fr 50% 1fr / 1fr;
   grid-template-areas:
     "about"
     "projects"
-    "skills";
+    "aside";
 }
 
 section {
@@ -136,6 +210,19 @@ section h2 {
 
 #about {
    grid-area: about; 
+   margin-bottom: 3rem;
+}
+
+.profile-wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+#about img {
+    border: 2px solid black;
+    border-radius: 100px;
+    width: 40%;
 }
 
 #projects {
@@ -143,7 +230,8 @@ section h2 {
 }
 
 #projects h2,
-#skills h2 {
+#skills h2,
+#contact h2 {
     margin-bottom: 3rem;
 }
 
@@ -153,7 +241,7 @@ section h2 {
     flex-direction: column;
     position: relative;
     align-items: center;
-    row-gap: 3rem;
+    row-gap: 5rem;
 }
 
 #projects .cards .card {
@@ -219,6 +307,14 @@ section h2 {
     padding-right: 1em;
 }
 
+aside {
+    grid-area: aside;
+    display: grid;
+    grid-template: .5fr .5fr / 1fr;
+    grid-template-areas: "skills" "contact";
+    /* row-gap: 5rem;; */
+}
+
 #skills {
     grid-area: skills;
     padding-left: 3rem;
@@ -234,6 +330,25 @@ section h2 {
 #skills img {
     height: 3rem;
     margin-right: 1rem;
+}
+
+#contact ul {
+    grid-area: contact;
+    display: grid;
+    justify-content: center;
+    row-gap: 1rem;
+}
+
+#contact a,
+#contact a:link,
+#contact a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+#contact a:hover,
+#contact a:focus {
+    text-decoration: underline;
 }
 
 footer {
@@ -309,15 +424,40 @@ footer p {
     }    
 }
 
+/* Media Queries */
+
+@media (min-width: 768px) {
+    .header-content {
+        padding-top: 2rem;
+    }
+    header h1 {
+        font-size: 5rem;
+        letter-spacing: 5px;
+    }
+    header h1 span {
+        letter-spacing: -.8px;
+    }
+    main {
+        grid-template: 1fr 53% 1fr / 1fr;
+        grid-template-areas: 
+            "about"
+            "projects"
+            "aside";
+    }
+    aside {
+        row-gap: 5rem;
+    }
+}
+
 @media (min-width: 820px) {
     header {
         min-height: 35vh;
-    }
+    }    
 }
 
 @media (min-width: 1024px) {
     .container {
-        grid-template: 1fr 70% 1fr / 1fr;
+        grid-template: 1fr 85% 1fr / 1fr;
         grid-template-areas: "header" "main" "footer";
     }
     header {
@@ -339,12 +479,20 @@ footer p {
         font-size: 4rem;
     }
     main {
-        grid-template: 1fr 60% 1fr / 1fr;
+        grid-template: .5fr 40% 1fr / 1fr;
         grid-template-areas:
             "about"
             "projects"
-            "skills";
-        margin-bottom: 0;
+            "aside";
+        margin-bottom: -15rem;
+        row-gap: 3rem;
+    }
+    .profile-wrapper {
+        flex-direction: row;
+    }
+
+    .profile-wrapper img {
+        margin-left: 2rem;
     }
     footer {
         min-height: 50vh;
@@ -352,11 +500,16 @@ footer p {
     section {
         font-size: 2rem;
     }
+    aside {
+        row-gap: 0;
+        grid-template: repeat(2, .4fr) / 1fr;
+        grid-template-areas: "skills" "contact";
+    }
     #projects h2,
     #skills h2 {
         margin-bottom: 3rem;
     }
-        #projects .cards {
+    #projects .cards {
         flex-direction: row;
         flex-wrap: wrap;
         row-gap: 3rem;
@@ -369,9 +522,14 @@ footer p {
     .card-back dd {
         font-size: 1.5rem;
     }
+    #skills {
+        padding-left: 10rem;
+        padding-right: 10rem;
+    }
     #skills img {
         height: 2rem;
     }
+    
     .footer-content {
         font-size: 2rem;
         left: 32%;
@@ -417,24 +575,37 @@ footer p {
         grid-template: 25% 75% / repeat(4, 1fr);
         grid-template-areas: 
             "about    about    about  about"
-            "projects projects projects skills";
+            "projects projects projects aside";
         column-gap: 2rem;
     }   
+    
     #about p {
         padding-left: 5rem;
         padding-right: 5rem;
     }
+    #about img {
+        margin-left: 7rem;
+        width: 45%
+    }
+    .copy-wrapper {
+        align-self: flex-start;
+    }
     .card-back dd {
         font-size: 1.75rem;
     }
+    aside {
+        grid-template: 40% 1fr / 1fr;
+        grid-template-areas: "skills" "contact";
+    }
     #skills {
-        padding-right: 0;
+        padding-left: 5rem;
+        padding-right: 5rem;
     }
     #skills ul {
         justify-content: flex-start;
     }
     .footer-content {
-        left: 45%;
+        left: 42%;
     }
 }
 
