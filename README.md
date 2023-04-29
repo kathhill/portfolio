@@ -12,3 +12,8 @@ In partial fulfullment of the Full-Stack Engineer Career Path on Codecademy; a p
 ## Link to Live Site
 
 [https://kathhill.github.io/portfolio](https://kathhill.github.io/portfolio)
+
+## TODO
+
+- Add accessibility
+- Add back to top buttons
